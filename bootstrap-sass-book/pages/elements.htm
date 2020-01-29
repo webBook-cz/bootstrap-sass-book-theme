@@ -1,0 +1,662 @@
+title = "home"
+url = "/elements"
+layout = "demo"
+is_hidden = 0
+==
+    <header class="bg-primary-img" id="top">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12">
+                    <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-light">
+                        <h1 class="display-4">{{ this.theme.intro_headline }}</h1>
+                        <p class="lead">{{ this.theme.intro_headline }}</p>
+                        {% if this.theme.intro_button_link %}
+                            <a href="{{ this.theme.intro_button_link }}" class="btn btn-light w-50 m-0-auto" target="_blank">{{ this.theme.intro_button }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% put styles %}
+    <style>
+        .bg-primary-img::after {
+              content: "";
+              background: url({{ this.theme.intro_img.path }});
+              opacity: 0.1;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              position: absolute;
+              /*z-index: -1;   */
+        }
+    </style>
+    {% endput %}
+    </header>
+ 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
+        <div class="container">
+            <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.intro_headline }}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-center top-navbar" id="collapsingNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#buttons">Buttons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navs">Navs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cards">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modals">Modals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#typography">Typography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#forms">Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grid">Grid</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          More
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDd">
+                            <a class="dropdown-item px-2" href="#more">Badges</a>
+                            <a class="dropdown-item px-2" href="#tooltips">Tooltips &amp; Popups</a>
+                            <a class="dropdown-item px-2" href="#alerts">Progress &amp; Alerts</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item px-2" href="#accordion">Accordion</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <main>
+        <section class="bg-light mb-2">
+            <div class="container">
+                <div class="row vh-100">
+                    <div class="col-12 my-auto">
+                        <div class="row text-center">
+                            <div class="col-lg-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                        <h1 class="display-2 text-primary"><span class="ion ion-ios-snow-outline"></span></h1>
+                                        <h4 class="card-title text-primary">Unique</h4>
+                                        <p class="card-text">Don't like that typical Bootstrap look? Each theme has a custom look-and-feel, while maximizing use of Bootstrap without extensive additional CSS &amp; JS.</p>
+                                        <a href="#" class="btn btn-primary mt-auto">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                        <h1 class="display-2 text-primary"><span class="ion ion-ios-tablet-portrait-outline"></span></h1>
+                                        <h4 class="card-title text-primary">Responsive</h4>
+                                        <p class="card-text">Based on mobile-first Bootstrap 4, all themes are 100% responsive and designed to look great on everything from smartphones to tablets to desktops..</p>
+                                        <a href="#" class="btn btn-primary mt-auto">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                        <h1 class="display-2 text-primary"><span class="ion ion-ios-checkmark-circle-outline"></span></h1>
+                                        <h4 class="card-title text-primary">Consistent</h4>
+                                        <p class="card-text">Themes are crafted with care for design and performance. All themes are built on modern HTML5 &amp; CSS3 standards to ensure consistency and cross-browser support.</p>
+                                        <a href="#" class="btn btn-primary mt-auto">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="buttons" class="pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="pb-3">
+                            <button type="button" class="btn btn-primary mr-1">Primary color</button>
+                            <button type="button" class="btn btn-outline-primary">Outline</button>
+                        </div>
+                        <div class="pb-3">
+                            <button type="button" class="btn btn-primary align-bottom btn-lg mr-1">Large</button>
+                            <button type="button" class="btn btn-primary align-bottom mr-1">Normal</button>
+                            <button type="button" class="btn btn-primary align-bottom btn-sm mr-1">Small</button>
+                            <a href="#" class="text-primary">Text</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-secondary">Secondary</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-info">Info</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-danger">Danger</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-success">Success</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-warning">Warning</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-light">Light</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-outline-dark">Dark</button>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-secondary">Secondary</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-info">Info</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-danger">Danger</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-success">Success</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-warning">Warning</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-light">Light</button>
+                    </div>
+                    <div class="col-md-auto col-3">
+                        <button class="btn btn-dark">Dark</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="navs" class="container pb-5">
+            <div class="row">
+                <div class="col-xl-9 pb-4">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-2">
+                        <a class="navbar-brand" href="#navs">Light text</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarColor02">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#navs" title="Current breakpoint tier">
+                                        Tier     
+                                        <span class="d-xl-inline d-none">XL</span>
+                                        <span class="d-lg-inline d-xl-none d-none">LG</span>
+                                        <span class="d-md-inline d-lg-none d-none">MD</span>
+                                        <span class="d-sm-inline d-md-none d-none">SM</span>
+                                        <span class="d-inline d-sm-none">XS</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#navs">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav class="navbar navbar-expand-md navbar-light bg-primary mb-3">
+                        <a class="navbar-brand" href="#navs">Dark text</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarColor03">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#navs">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#navs">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="card border-0">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tab1" data-toggle="tab">Tab</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab2" data-toggle="tab">Tab</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab3" data-toggle="tab">Tab</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#tab4" data-toggle="tab">Disabled</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content px-1 pt-3">
+                            <div class="tab-pane active" id="tab1">
+                                Select a palette, change the <span class="text-primary ">primary</span>, <span class="text-secondary ">secondary</span>, 
+                                <span class="text-success ">success</span>, <span class="text-danger ">danger</span>, 
+                                <span class="text-info ">info</span>, and <span class="text-warning ">warning</span> colors. 
+                                Choose from various Google Fonts, and modify most of the Bootstrap SASS variables. Click to generate your completely custom 
+                                Bootstrap theme.
+                            </div>
+                            <div class="tab-pane" id="tab2">
+                                The whole idea is to make the Bootstrap customization process easier, and allow you to visualize changes along the way. 
+                                For most users it's designed to be point-and-click, while advanced users can delve into the SASS as desired. It's a 4-step process.
+                            </div>
+                            <div class="tab-pane" id="tab3">3. Put some more content in your pane here.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 pb-4">
+                    <ul class="nav nav-pills flex-column mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#navs">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navs">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navs">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navs">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <div class="btn-group mb-3 w-100">
+                        <button type="button" class="btn btn-primary btn-block">Dropdown</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#navs">Action</a>
+                            <a class="dropdown-item" href="#navs">Link</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#navs">Separated link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cards" class="container pb-5">
+            <div class="d-flex my-3">
+                <div class="jumbotron w-100 py-5 mx-auto">
+                    <h1>Bootstrap 4 SASS book Template</h1>
+                    <h4>You can easy change color, fonts and visual style within October CMS</h4>
+                    <p class="lead">
+                        Download <strong>Bootstrap 4 SASS book</strong> theme for free form October CMS website. You can test all the functionality on our website here:
+                        <a href="https://webbook.page/">webbook.page</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-primary h-100">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h4 class="card-title text-primary">Card Outline</h4>
+                            <p class="card-text">Themestr.app makes it easy to customize this, and other free Bootstrap 4 themes for your downloading pleasure.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-primary h-100">
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">Dis List Group</a>
+                                <a href="#" class="list-group-item list-group-item-action">Custom Colors</a>
+                                <a href="#" class="list-group-item list-group-item-action">Google Fonts</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Ionicons</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card bg-primary text-white h-100">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h4 class="card-title">Scrollspy</h4>
+                            <p class="card-text">The top NavBar utilizes Bootstrap's Scrollspy component. You'll notice when you scroll the page the "active" nav section is highlighted.</p>
+                            <a href="https://getbootstrap.com/docs/4.1/components/scrollspy/" class="btn btn-primary border-white mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="modals" class="container pb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid">
+                        <div class="position-relative" style="z-index:1000">
+                            <div id="myModal" class="modal d-block position-relative" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3>Modal</h3>
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>This is a basic Bootstrap 4 modal. The modal also comes in a <a href="#modal-sm" data-toggle="modal">smaller</a> and <a href="#modal-lg" data-toggle="modal">larger</a> sizes.</p>
+                                        <p>
+                                            What will you put in your modal? Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" data-dismiss="alert" aria-hidden="true">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9"></div>
+            </div>
+        </section>
+        <section id="typography" class="container pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="text-secondary">Heading Font <small>(secondary color)</small></h4>
+                </div>
+                <div class="col-xl-4">
+                    <h6>Heading 6</h6>
+                    <h5>Heading 5</h5>
+                    <h4>Heading 4</h4>
+                    <h3 class="text-truncate">Heading 3</h3>
+                    <h2 class="text-truncate">Heading 2</h2>
+                    <h1 class="text-truncate">Heading 1</h1>
+                    <p class="lead">Lead</p>
+                    <p>Paragraph</p>
+                    <span class="badge badge-dark">badge</span>
+                </div>
+                <div class="col-xl-8 text-right">
+                    <p class="display-4 text-truncate">Display 4</p>
+                    <p class="display-3 text-truncate">Display 3</p>
+                    <p class="display-2 text-truncate">Display 2</p>
+                    <p class="display-1 text-truncate">Display 1</p>
+                </div>
+            </div>
+        </section>
+        <section id="forms" class="container pb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label form-control-label text-muted">First</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" value="Jane">
+                            </div>
+                            <label class="col-md-1 col-form-label form-control-label text-muted">Last</label>
+                            <div class="col-md-5">
+                                <input class="form-control" type="text" value="Bishop">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-form-label form-control-label text-muted">Address</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" placeholder="Street">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-form-label form-control-label text-muted"></label>
+                            <div class="col-lg-6">
+                                <input class="form-control" type="text" placeholder="City">
+                            </div>
+                            <div class="col-lg-4">
+                                <select class="form-control">
+                                    <option>State</option>
+                                    <option>AK</option>
+                                    <option>AZ</option>
+                                    <option>CA</option>
+                                    <option>CO</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row was-validated">
+                            <label class="col-lg-2 col-form-label form-control-label text-muted">Username</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" type="text" required="" id="un" name="un">
+                                <div class="invalid-feedback">
+                                  Username is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-form-label form-control-label"></label>
+                            <div class="col-lg-10">
+                                <input type="reset" class="btn btn-outline-secondary mr-2" value="Cancel">
+                                <input type="button" class="btn btn-primary mr-2" value="Submit">
+                                <div class="custom-control custom-checkbox d-inline">
+                                  <input type="checkbox" class="custom-control-input" id="customCheck" checked="">
+                                  <label class="custom-control-label" for="customCheck">Check me out</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="grid" class="container pb-5">
+            <p class="lead">The rows &amp; columns of the world famous Bootstrap grid speak for themselves.</p>
+            <div class="row">
+                <div class="col-sm-6">
+                    6
+                </div>
+                <div class="col-6">
+                    <div class="card my-1 bg-light">6</div>
+                </div>
+                <div class="col-sm-5">
+                    5
+                </div>
+                <div class="col-7">
+                    <div class="card my-1">7</div>
+                </div>
+                <div class="col-sm-4">
+                    4
+                </div>
+                <div class="col-8">
+                    <div class="card my-1">8</div>
+                </div>
+                <div class="col-sm-3">
+                    3
+                </div>
+                <div class="col-9">
+                    <div class="card my-1">9</div>
+                </div>
+                <div class="col-sm-2">
+                    2
+                </div>
+                <div class="col-10">
+                    <div class="card my-1">10</div>
+                </div>
+                <div class="col-sm-1">
+                    1
+                </div>
+                <div class="col-11">
+                    <div class="card my-1">11</div>
+                </div>
+            </div>
+        </section>
+        <section id="more" class="container pb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-sm">
+                            <tbody>
+                                <tr>
+                                    <th class="w-25">Location</th>
+                                    <th class="w-50">Date</th>
+                                    <th class="w-25">Visits</th>
+                                </tr>
+                                <tr>
+                                    <td>Westfield</td>
+                                    <td>08.05.18 <span class="badge badge-primary">badge</span></td>
+                                    <td>2323</td>
+                                </tr>
+                                <tr>
+                                    <td>Galway</td>
+                                    <td>08.05.18 <span class="badge badge-pill badge-primary">badge-pill</span></td>
+                                    <td>5362</td>
+                                </tr>
+                                <tr class="table-primary">
+                                    <td>Bern</td>
+                                    <td>08.05.18</td>
+                                    <td>153</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="w-100 my-4"></div>
+                <div class="col-md-8" id="tooltips">
+                    <a href="#" class="text-primary" data-toggle="tooltip" data-placement="right" title="" data-original-title="This tooltip is on the right.">Right tooltip (hover)</a>
+                    <br>
+                    <a href="#" class="text-primary" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="This tooltip is on the bottom.">Bottom tooltip (hover)</a>
+                    <br>
+                </div>
+                <div class="col-md-4 text-right">
+                    <!--
+                    <div class="px-4 p-2 rounded bg-primary text-light" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                        Toggle my popover
+                    </div>-->
+                    <button type="button" class="btn btn-lg btn-primary" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title">Toggle my popover</button>
+                </div>
+                <div class="w-100 my-4"></div>
+                <div class="col-md-12" id="alerts">
+                    <div class="progress mb-2">
+                        <div class="progress-bar bg-primary w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="alert alert-primary alert-dismissable show fade" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <strong>Well done!</strong> You successfully read this important alert message.
+                    </div>
+                </div>
+                <div class="w-100 my-4"></div>
+            </div>
+        </section>
+        <section class="mb-4" id="accordion">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="text-green mb-4 text-center">Accordion</h1>
+              </div>
+              <div class="col-10 mx-auto">
+
+                <div class="accordion" role="tablist">
+                  <div class="card">
+                    <div class="card-header p-0" role="tab" id="headingOne">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <i class="fas fa-chevron-down float-right"></i>
+                          Collapsible Group Item #1
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent=".accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header p-0" role="tab" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <i class="fas fa-chevron-down float-right"></i>
+                          Collapsible Group Item #2
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent=".accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header p-0" role="tab" id="headingThree">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <i class="fas fa-chevron-down float-right"></i>
+                          Collapsible Group Item #3
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent=".accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <table class="table">
+              <tbody>
+                <tr>
+                    <th>xs</th>
+                    <th>sm</th>
+                    <th>md</th>
+                    <th>lg</th>
+                    <th>xl</th>
+                </tr>
+                <tr>
+                  <td><div class="d-none d-sm-block">hidden-xs-down</div></td>
+                  <td><div class="d-none d-md-block">hidden-sm-down</div></td>
+                  <td><div class="d-none d-lg-block">hidden-md-down</div></td>
+                  <td><div class="d-none d-xl-block">hidden-lg-down</div></td>
+                  <td><div class="d-none">hidden-xl-down</div></td>
+                </tr>
+                <tr>
+                  <td><div class="d-none">hidden-xs-up</div></td>
+                  <td><div class="d-sm-none">hidden-sm-up</div></td>
+                  <td><div class="d-md-none">hidden-md-up</div></td>
+                  <td><div class="d-lg-none">hidden-lg-up</div></td>
+                  <td><div class="d-xl-none">hidden-xl-up</div></td>
+                </tr>
+                <tr>
+                  <td><div class="d-none d-sm-block">hidden-xs</div></td>
+                  <td><div class="d-block d-sm-none d-md-block">hidden-sm</div></td>
+                  <td><div class="d-block d-md-none d-lg-block">hidden-md</div></td>
+                  <td><div class="d-block d-lg-none d-xl-block">hidden-lg</div></td>
+                  <td><div class="d-block d-xl-none">hidden-xl</div></td>
+                </tr>
+                <tr>
+                  <td><div class="d-block d-sm-none">visible-xs</div></td>
+                  <td><div class="d-none d-sm-block d-md-none">visible-sm</div></td>
+                  <td><div class="d-none d-md-block d-lg-none">visible-md</div></td>
+                  <td><div class="d-none d-lg-block d-xl-none">visible-lg</div></td>
+                  <td><div class="d-none d-xl-block">visible-xl</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </section>
+      </main>
+
+{% partial 'site/footer' %}

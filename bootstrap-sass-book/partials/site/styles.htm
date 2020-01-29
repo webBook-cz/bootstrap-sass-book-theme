@@ -1,0 +1,9 @@
+    {% if this.theme.font_awesome %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family={{ this.theme.fonts }}" rel="stylesheet">
+    <link href="{{ [
+            'assets/scss/webbook.scss'
+        ] | theme }}" rel="stylesheet">
+        {% styles %}
+    <link rel="stylesheet" href="{{ 'assets/css/test.css' | theme }}">

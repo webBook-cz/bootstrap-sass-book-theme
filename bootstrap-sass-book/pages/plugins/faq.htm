@@ -1,0 +1,35 @@
+title = "FAQ"
+url = "/plugins/faq/:slug?"
+layout = "default"
+is_hidden = 0
+
+[FaqAll]
+limit = 25
+sortOrder = "Select sort order"
+
+[FaqAsk]
+category = 1
+
+[FaqFeatured]
+featuredNumber = 5
+
+[FaqList]
+category = 1
+sortOrder = "desc"
+openFirst = 1
+==
+<section class="faq pb-3 pt-3">
+	<div class="container">
+    	<h2>Frequently Asked Questions</h2>
+    	{% component 'FaqAll' %}
+    	<hr>
+    	<h2>Questions by category</h2>
+    	{% component 'FaqList' %}
+    	<hr>
+    	<h3>Ask a question</h3>
+    	{% component 'FaqAsk' %}
+    	<hr>
+    	<h3>Hot Questions</h3>
+    	{% component 'FaqFeatured' %}
+  	</div>
+</section>

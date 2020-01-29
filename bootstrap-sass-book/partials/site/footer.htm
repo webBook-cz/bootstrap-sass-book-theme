@@ -1,0 +1,34 @@
+  <footer class="web-footer pt-2 pb-1">
+    <div class="container">
+      <div class="copyright text-center">&copy; {{ 'now' | date ('Y') }}
+        {{ this.theme.copyright ? this.theme.copyright : this.theme.site_title }}
+      </div>
+    </div>
+  </footer>
+      <div class="back-to-top" id="back-to-top">
+        <a href="#body" class="smoothscroll btn btn-sm btn btn-outline-secondary" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+      </div>
+  
+  {% put scripts %}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+      <script>
+          $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                  //console.log($(this).scrollTop());
+                  $('#back-to-top').fadeIn();
+                } else {
+                  $('#back-to-top').fadeOut();
+                }
+              });
+ 
+              // scroll body to 0px on click
+              $('#back-to-top').click(function () {
+                $('body,html').animate({
+                  scrollTop: 0
+                }, 400, "easeInOutExpo");
+                return false;
+              });
+          });
+      </script>
+  {% endput %}

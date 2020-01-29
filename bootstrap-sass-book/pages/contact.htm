@@ -1,0 +1,24 @@
+title = "Contact"
+url = "/contact"
+layout = "home"
+is_hidden = 0
+
+[emptyForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+js_on_success = "$('.tohide').slideUp();"
+==
+<section class="pt-4 pb-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+            
+      <h1>Login form</h1> 
+
+      {% component 'emptyForm' %}                   
+
+      </div>
+    </div>
+  </div>
+</section>

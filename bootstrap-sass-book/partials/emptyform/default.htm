@@ -1,0 +1,22 @@
+           	<form data-request="{{ __SELF__ }}::onFormSubmit">
+              {{ form_token() }}
+              <div id="{{ __SELF__ }}_forms_flash"></div>
+              <div; class="tohide">
+            	<div class="form-label-group">
+            	    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
+            	    <label for="inputEmail">Email address</label>
+            	</div>
+
+            	<div class="form-label-group">
+            	    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            	    <label for="inputPassword">Password</label>
+            	</div>
+
+            	<div class="custom-control custom-checkbox mb-3">
+            	      <input type="checkbox" class="custom-control-input" value="agree" name="agreement" id="agreement">
+                        <label class="custom-control-label" for="agreement">I agree with conditions</label>
+            	</div>
+
+            	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              </div>
+      	</form>

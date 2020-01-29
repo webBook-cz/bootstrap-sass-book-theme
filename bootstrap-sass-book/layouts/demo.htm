@@ -1,0 +1,40 @@
+==
+<!doctype html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ this.theme.site_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% if this.theme.font_awesome %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family={{ this.theme.fonts }}" rel="stylesheet">
+    <link href="{{ [
+            'assets/scss/webbook.scss'
+        ] | theme }}" rel="stylesheet">
+        {% styles %}
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="68" id="body">
+    {% page %}
+   <script  src="https://code.jquery.com/jquery-3.4.0.min.js"
+			integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			crossorigin="anonymous"></script>
+   <script src="{{[
+            'assets/js/bootstrap.bundle.min.js',
+            '@framework',
+            '@framework.extras',
+            'assets/js/site.js',
+        ] | theme }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    
+    <script>
+        $('.dropdown-item, .top-navbar .nav-link, .navbar-brand, .smoothscroll').click(function() {
+            var sectionTo = $(this).attr('href');
+            $('html, body').animate({
+              scrollTop: $(sectionTo).offset().top - 65
+            }, 700, "easeInOutExpo");
+        });
+    </script>
+    {% scripts %}
+</body>
+</html>

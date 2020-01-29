@@ -1,0 +1,33 @@
+title = "FAQ"
+url = "/faq-category/:slug?"
+layout = "default"
+is_hidden = 0
+
+[FaqAsk]
+category = 1
+
+[FaqList]
+category = 1
+sortOrder = "order"
+openFirst = 0
+limit = 3
+
+[FaqList FaqList2]
+category = 2
+sortOrder = "desc"
+openFirst = 1
+limit = 10
+==
+<section class="faq pb-3 pt-3">
+	<div class="container">
+    	<h2>Questions by category</h2>
+    	{% component 'FaqList' %}
+    	<hr>
+    	{% component 'FaqList2' %}
+    	<hr>
+    	<h3>Ask a question</h3>
+    	{% component 'FaqAsk' %}
+    	<hr>
+    	
+  	</div>
+</section>
