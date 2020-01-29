@@ -1,0 +1,157 @@
+//Font Awesome demo page styling
+@import "webbook/fa";
+//Form Floating labels styling
+@import "webbook/form";
+//webBook FAQ plugin styling 
+@import "webbook/faq";
+//webBook Download plugin styling 
+@import "webbook/download";
+
+.navbar-brand {
+  img {
+    width: 340px;
+    height: auto;
+  }
+  margin: -12px 0 -11px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    display: none;
+}
+
+.bg-primary-img {
+  background-color: $primary;
+}
+
+.bg-light {
+  background-color: $light;
+}
+.collapsing {
+    transition: 0.5s;
+}
+
+.card-header .fas {
+  margin-top: 4px;
+  transition: .3s transform ease-in-out;
+}
+
+.card-header .collapsed .fas {
+  transform: rotate(90deg);
+}
+
+.web-header {
+  background-color: $secondary;
+  margin-top: 60px;
+}
+.web-main {
+  background-color: $light;
+}
+.web-footer {
+  background-color: $dark;
+  color: $light;
+}
+.bottomfix {
+  min-height: 2em;
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.bg-primary-img a {
+  z-index: 2;
+}
+
+//accordion
+.accordion .card {
+  border-bottom: none;
+  &:last-of-type {
+      border-bottom: $card-border-width solid $card-border-color;
+    }
+}
+
+.accordion .card-header {
+  border-bottom: none;
+}
+
+.collapse.show {
+    border-top: $card-border-width solid $card-border-color;
+}
+
+.description {
+  padding: 20px;
+}
+
+//carousel
+.carousel-item {
+  height: 32rem;
+  background-color: $secondary;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  h1 { 
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+  }
+}
+
+.navbar-brand  img {
+   @include media-breakpoint-down(xs) {
+     max-width: 320px;    
+   }
+}
+
+.nav-tabs {
+  background:  $light;
+}
+
+.button-wrapper {
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-top: -10px;
+  z-index: 10;
+}
+
+.attr-wrapper {
+  .col-md-3 {
+    margin-bottom: 10px;
+  }
+}
+.custom-checkbox {
+  label {
+    line-height: 1em;
+  }
+}
+//card distribution
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}
+
+#previous, #next {
+  text-align: center;
+  width: 255px;
+  max-width: 100%;
+}

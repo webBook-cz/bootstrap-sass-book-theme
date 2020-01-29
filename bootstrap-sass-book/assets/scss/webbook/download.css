@@ -1,0 +1,13 @@
+.image-ico {
+    width: 80px;
+    height: 120px;
+}
+.image-smallico {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    svg {
+    	max-height: 40px;	
+    }
+}

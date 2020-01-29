@@ -1,0 +1,63 @@
+// Bootstrap root variables
+$blue:       $colour-blue;
+$indigo:     $colour-indigo;
+$purple:     $colour-purple;
+$pink:       $colour-pink;
+$red:        $colour-red;
+$orange:     $colour-orange;
+$yellow:     $colour-yellow;
+$green:      $colour-green;
+$teal:       $colour-teal;
+$cyan:       $colour-cyan;
+$white:      $colour-white;
+$gray:       $colour-gray-600;
+$gray-dark:  $colour-gray-800;
+
+
+$grid-breakpoints: (
+  xs: $break-xs,
+  sm: $break-sm,
+  md: $break-md,
+  lg: $break-lg,
+  xl: $break-xl
+);
+
+// Overriding Bootstrap fonts
+
+$font-family-base: $font-text;
+$line-height-base: $font-text-height;
+$font-weight-normal: $font-text-weight;
+
+$headings-font-family: $font-head;
+$headings-font-weight: $font-head-weight;
+$headings-line-height: $font-head-height;
+
+// Overriding Bootstrap colors
+$primary:      $colour-primary;
+$secondary:    $colour-secondary;
+$success:      $colour-success;
+$danger:       $colour-danger;
+$info:         $colour-info;
+$warning:      $colour-warning;
+$light:        $colour-light;
+$dark:         $colour-dark;
+
+@if $rounded == 1 {
+    $enable-rounded:true;
+} @else {
+    $enable-rounded:false;
+}
+@if $gradients == 1 {
+    $enable-gradients:true;
+} @else {
+    $enable-gradients:false;
+}
+
+// $enable-grid-classes:false;
+// $enable-shadows:true;
+
+// loading Bootstrap styles
+@import "bootstrap";
+
+// Adding custom styling
+@import "theme";
