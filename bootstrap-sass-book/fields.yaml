@@ -1,0 +1,339 @@
+tabs:
+    fields:
+        site_title:
+            tab: General
+            label: Title
+            type: text
+            default: My new webpage
+            comment: Used at site title
+            span: auto
+        site_logo:
+            tab: General
+            label: Logo Image
+            comment: Please use transparent image
+            type: fileupload
+            mode: image
+            fileTypes: jpg,jpeg,bmp,png,webp,gif,svg
+            imageWidth: 240
+            imageHeight: 90
+            span: auto
+        copyright:
+            tab: General
+            label: Copyright 
+            type: text
+            span: auto
+        site_locale:
+            tab: General
+            label: Locale
+            type: text
+            default: en
+            comment: Used for HTML lang parameter
+            span: left
+        info_section_01:
+            tab: General
+            label: Fonts
+            type: section
+            comment: Don't forget to include style for your font file in header (eg. link from google fonts)
+            cssClass: "p-t-0"
+        font_text:
+            label: Font name for text
+            tab: General
+            type: text
+            default: 'Montserrat, sans-serif'
+            assetVar: 'font-text'
+            span: storm
+            cssClass: "col-sm-6 p-l-0"
+        font_text_weight:
+            label: Font weight
+            tab: General
+            type: text
+            default: '300'
+            assetVar: 'font-text-weight'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+        font_text_height:
+            label: Font line-height
+            tab: General
+            type: text
+            default: '1.5'
+            assetVar: 'font-text-height'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        font_head:
+            label: Font name for headings
+            tab: General
+            type: text
+            default: '"Roboto Slab", serif'
+            assetVar: 'font-head'
+            span: storm
+            cssClass: "col-sm-6 p-l-0"
+        font_head_weight:
+            label: Font weight
+            tab: General
+            type: text
+            default: '400'
+            assetVar: 'font-head-weight'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+        font_head_height:
+            label: Font line-height
+            tab: General
+            type: text
+            default: '1.5'
+            assetVar: 'font-head-height'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        fonts:
+            tab: General
+            label: Google fonts
+            type: text
+            default: Montserrat:300,300i,400,400i,700,700i|Roboto+Slab:400,700&display=swap&subset=latin-ext
+            comment: "Link if you want to use google fonts (eg: Open+Sans:400,400i,700,800|Oswald&display=swap&subset=latin-ext)"
+
+        font_awesome:
+            tab: General
+            label: Use Font Awesome
+            type: switch
+            default: true
+        footer_menu:
+            tab: General
+            label: Visible footer menu
+            type: switch
+            default: true
+
+        intro_enabled:
+            tab: Intro
+            label: Enabled
+            type: switch
+            default: true
+        intro_headline:
+            tab: Intro
+            label: Headline
+            type: text
+            span: auto
+            default: "Bootstrap 4.4.1 SASS Theme"
+        intro_subhead:
+            tab: Intro
+            label: Subhead
+            type: text
+            span: auto
+            default: "Bootsrtrap with easy custom config!"
+        intro_button:
+            tab: Intro
+            label: Button
+            type: text
+            default: Go to Theme Homepage
+            span: left
+        intro_button_link:
+            tab: Intro
+            label: Button link
+            type: text
+            default: "https://webbook.page/bootstrap-sass-theme"
+            span: right
+            comment: Leave empty for hiding button
+        intro_img:
+            tab: Intro
+            label: Image
+            comment: Please aspect ratio 0,5625 (e.g. 621 x 1104)
+            type: fileupload
+            mode: image
+            imageWidth: 1920
+            imageHeight: 1068
+            assetVar: 'intro-img'
+
+        primary_color:
+            label: Primary Colour
+            tab: Bootstrap Colours & Settings
+            type: colorpicker
+            default: '#2f3c48'
+            assetVar: 'colour-primary'
+        secondary_color:
+            label: Secondary Colour
+            tab: Bootstrap Colours & Settings
+            type: colorpicker
+            default: '#6f7f8c'
+            assetVar: 'colour-secondary'
+        success_color:
+            label: Success Colour
+            tab: Bootstrap Colours & Settings
+            type: colorpicker
+            default: '#3e4d59'
+            assetVar: 'colour-success'
+        info_color:
+            label: Info color
+            type: colorpicker
+            tab: Bootstrap Colours & Settings
+            default: '#5c8f94'
+            assetVar: 'colour-info'
+        warning_color:
+            label: Warning color
+            type: colorpicker
+            tab: Bootstrap Colours & Settings
+            default: '#6e9fa5'
+            assetVar: 'colour-warning'
+        danger_color:
+            label: Danger color
+            type: colorpicker
+            tab: Bootstrap Colours & Settings
+            default: '#cc330d'
+            assetVar: 'colour-danger'
+        light_color:
+            label: Light color
+            type: colorpicker
+            tab: Bootstrap Colours & Settings
+            default: '#eceeec'
+            assetVar: 'colour-light'
+        dark_color:
+            label: Dark color
+            type: colorpicker
+            tab: Bootstrap Colours & Settings
+            default: '#1e2b37'
+            assetVar: 'colour-dark'
+        rounded:
+            label: Rounded
+            type: switch
+            tab: Bootstrap Colours & Settings
+            default: true
+            assetVar: 'rounded'
+            span: auto
+        gradients:
+            label: Gradients
+            type: switch
+            tab: Bootstrap Colours & Settings
+            default: false
+            assetVar: 'gradients'
+            span: auto
+
+
+        blue:
+            label: Blue
+            type: colorpicker
+            tab: root vars
+            default: '#007bff'
+            assetVar: 'colour-blue'
+        indigo:
+            label: Indigo
+            type: colorpicker
+            tab: root vars
+            default: '#6610f2'
+            assetVar: 'colour-indigo'
+        purple:
+            label: Purple
+            type: colorpicker
+            tab: root vars
+            default: '#6f42c1'
+            assetVar: 'colour-purple'
+        pink:
+            label: Pink
+            type: colorpicker
+            tab: root vars
+            default: '#e83e8c'
+            assetVar: 'colour-pink'
+        red:
+            label: Red
+            type: colorpicker
+            tab: root vars
+            default: '#dc3545'
+            assetVar: 'colour-red'
+        orange:
+            label: Orange
+            type: colorpicker
+            tab: root vars
+            default: '#fd7e14'
+            assetVar: 'colour-orange'
+        yellow:
+            label: Yellow
+            type: colorpicker
+            tab: root vars
+            default: '#ffc107'
+            assetVar: 'colour-yellow'
+        green:
+            label: Green
+            type: colorpicker
+            tab: root vars
+            default: '#28a745'
+            assetVar: 'colour-green'
+        teal:
+            label: Teal
+            type: colorpicker
+            tab: root vars
+            default: '#20c997'
+            assetVar: 'colour-teal'
+        cyan:
+            label: Cyan
+            type: colorpicker
+            tab: root vars
+            default: '#17a2b8'
+            assetVar: 'colour-cyan'
+        white:
+            label: White
+            type: colorpicker
+            tab: root vars
+            default: '#fff;'
+            assetVar: 'colour-white'
+        gray-600:
+            label: Gray light
+            type: colorpicker
+            tab: root vars
+            default: '#6c757d'
+            assetVar: 'colour-gray-600'
+        gray-800:
+            label: Gray dark
+            type: colorpicker
+            tab: root vars
+            default: '#343a40'
+            assetVar: 'colour-gray-800'
+
+        info_section:
+            tab: root vars
+            label: "Breakpoints"
+            type: section
+            comment: "Be careful: if not sure, leave default values"
+            cssClass: "p-a m-y control-scrollpanel"
+
+        break-xs:
+            label: Break XS
+            type: text
+            tab: root vars
+            default: '0'
+            assetVar: 'break-xs'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        break-sm:
+            label: Break SM
+            type: text
+            tab: root vars
+            default: '576px'
+            assetVar: 'break-sm'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        break-md:
+            label: Break MD
+            type: text
+            tab: root vars
+            default: '768px'
+            assetVar: 'break-md'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        break-lg:
+            label: Break LG
+            type: text
+            tab: root vars
+            default: '992px'
+            assetVar: 'break-lg'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        break-xl:
+            label: Break XL
+            type: text
+            tab: root vars
+            default: '1200px'
+            assetVar: 'break-xl'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
