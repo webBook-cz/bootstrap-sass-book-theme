@@ -6,3 +6,4 @@ code: bootstrap-sass-book
 form: fields.yaml
 require:
 - Martin.Forms
+- WebBook.Checkcontent
