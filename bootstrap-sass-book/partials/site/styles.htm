@@ -7,3 +7,6 @@
         ] | theme }}" rel="stylesheet">
         {% styles %}
     <link rel="stylesheet" href="{{ 'assets/css/test.css' | theme }}">
+    {% if this.theme.google_analytics %}
+        {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
+    {% endif %}
