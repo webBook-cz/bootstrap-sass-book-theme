@@ -96,12 +96,29 @@ tabs:
             tab: General
             label: Use Font Awesome
             type: switch
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
             default: true
         footer_menu:
             tab: General
             label: Visible footer menu
             type: switch
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
             default: true
+
+        info_section_02:
+            tab: General
+            type: section
+            cssClass: "p-t-0"
+
+        google_analytics:
+            label: Google Analytics ID
+            tab: General
+            type: text
+            assetVar: 'font-head-weight'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
 
         intro_enabled:
             tab: Intro
@@ -139,8 +156,8 @@ tabs:
             comment: Please aspect ratio 0,5625 (e.g. 621 x 1104)
             type: fileupload
             mode: image
-            imageWidth: 1920
-            imageHeight: 1068
+            imageWidth: 1200
+            imageHeight: 900
             assetVar: 'intro-img'
 
         primary_color:
