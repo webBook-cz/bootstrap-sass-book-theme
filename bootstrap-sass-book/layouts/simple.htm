@@ -1,0 +1,16 @@
+==
+<!doctype html>
+<html lang="{{ this.theme.site_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ this.page.title }} | {{ this.theme.site_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% partial 'site/styles' %}
+</head>
+<body id="body">
+    {% partial 'site/header' %}
+    {% partial 'site/simple-nav' %}
+        {% page %}
+    {% partial 'site/scripts' %}
+</body>
+</html>
