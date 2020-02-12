@@ -1,3 +1,4 @@
+==
 <form data-request="{{ __SELF__ }}::onFormSubmit">
       {{ form_token() }}
       <div id="{{ __SELF__ }}_forms_flash"></div>
@@ -11,12 +12,16 @@
     	    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
     	    <label for="inputPassword">Password</label>
     	</div>
+        <div class="form-label-group">
+            <textarea class="form-control" id="inputContent" rows="3" name="content" placeholder="Your text here"></textarea>
+            <label for="inputContent">Your text here</label>
+        </div>
 
     	<div class="custom-control custom-checkbox mb-3">
     	      <input type="checkbox" class="custom-control-input" value="agree" name="agreement" id="agreement">
               <label class="custom-control-label" for="agreement">I agree with conditions</label>
     	</div>
 
-    	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    	<button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
       </div>
 </form>

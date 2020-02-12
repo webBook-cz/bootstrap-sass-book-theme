@@ -21,7 +21,7 @@
 		border-radius: .25rem;
 		transition: all .1s ease-in-out;
 	}
-	input {
+	input, textarea {
 
 		&::-webkit-input-placeholder {
 			color: transparent;
@@ -50,6 +50,7 @@
 		}
 	}
 }
+.form-label-group > input,
 .form-label-group > input,
 .form-label-group > label {
 	padding: var(--input-padding-y) var(--input-padding-x);
