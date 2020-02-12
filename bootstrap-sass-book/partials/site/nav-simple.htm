@@ -1,0 +1,14 @@
+==
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
+    <div class="container">
+        
+        {% if this.theme.site_logo %}
+            <a class="navbar-brand" href="{{ 'home'|page }}#top">
+                <img src="{{ this.theme.site_logo.path }}" alt="{{ this.theme.site_title }}">
+            </a>
+        {% else %}
+            <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.site_title }}</a>
+        {% endif %}
+        
+    </div>
+</nav>
