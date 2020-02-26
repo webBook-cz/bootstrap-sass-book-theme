@@ -1,0 +1,11 @@
+==
+{% if __SELF__.categories|length > 0 %}
+    <ul class="list-group list-group-flush categories">
+        {% partial __SELF__ ~ "::items"
+            categories = __SELF__.categories
+            currentCategorySlug = __SELF__.currentCategorySlug
+        %}
+    </ul>
+{% else %}
+    <p>No categories were found.</p>
+{% endif %}

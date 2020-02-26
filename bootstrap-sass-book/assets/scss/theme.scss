@@ -6,6 +6,8 @@
 @import "webbook/faq";
 //webBook Download plugin styling 
 @import "webbook/download";
+//Rainlab Blog plugin styling 
+@import "plugins/rainlab-blog";
 
 .navbar-brand {
   img {
@@ -13,6 +15,10 @@
     height: auto;
   }
   margin: -12px 0 -11px;
+}
+
+.jumbotron {
+  background-color: $secondary;
 }
 
 .back-to-top {

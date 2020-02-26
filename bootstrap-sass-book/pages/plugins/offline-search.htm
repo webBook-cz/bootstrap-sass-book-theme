@@ -1,0 +1,62 @@
+title = "Search"
+url = "/search"
+layout = "default"
+meta_title = "Blog search"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 1000
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+{#% partial 'header' %#}
+
+<style type="text/css">
+	.ss-result {
+    margin-bottom: 2em;
+}
+.ss-result__aside {
+    float: right;
+    margin-left: .5em;
+}
+.ss-result__title {
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+.ss-result__badge {
+    font-size: .7em;
+    padding: .2em .5em;
+    border-radius: 4px;
+    margin-left: .75em;
+    background: #eee;
+    display: inline-block;
+}
+.ss-result__text {
+    margin-bottom: .5em;
+}
+.ss-result__url {
+}
+</style>
+<section class="search">
+	<div class="container">
+		<div class="res" style=" min-height: 500px;">
+			<br>
+			<h1>Search result for phrase - "{{ searchResults.query }}"</h1>
+			
+			<form action="{{ 'search' | page }}" method="get">
+				<div class="input-group mb-3">
+				  <input type="text" class="form-control" value="{{ searchResults.query }}" name="q" type="text" placeholder="Search" autocomplete="on">
+				  <div class="input-group-append">
+				    <button class="btn btn-success" type="submit">SEARCH</button>
+				  </div>
+				</div>
+			</form>
+			<br>
+			{% component 'searchResults' %}
+		</div>
+	</div>
+</section>
+
+
+{#% partial 'footer' %#}

@@ -1,0 +1,151 @@
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "plugins/rainlab-category"
+
+[tagList]
+orderBy = "name asc"
+limit = 0
+enableTagFilter = "never"
+tagPage = "plugins/ginopane-blogtags"
+tagsPage = "plugins/ginopane-blogtags"
+==
+<section class="blog_area section-padding1">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="">
+                <br>
+                    <h1 >{{ category.name }}</h1>
+                <br>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    
+                    {% if blogPost %}
+
+                    <div class="single-post">
+                        
+                        {% if post.featured_images[0] %}
+                            
+                            <div class="feature-img">
+                                <img class="img-fluid" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].title }}">
+                            </div>
+                        {% else %}
+                            <div class="feature-img">
+                                <img class="img-fluid" src="https://picsum.photos/750/375?random={{ post.id }}">
+                            </div>
+                            
+                        {% endif %}
+                        
+                        <div class="blog_details">
+                            <h2>{{ blogPost.post.title | raw }}
+                            </h2>
+                            <ul class="blog-info-link mt-3 mb-4">
+                                
+                                {% if post.categories.count %}
+                                {% endif %}
+                                {% for category in post.categories %}
+                                    
+                                    <li><a href="{{ url('/') }}/category/{{ category.slug }}">{{ category.name }}</a></li>
+                                    {% if not loop.last %}
+                                    {% endif %}
+                                {% endfor %}
+
+                            </ul>
+                            {{ blogPost.post.content_html | raw }}
+
+                            <div class="tags mb-3">
+                                {% component 'postTags' %}
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+                    {#% set posts = blogPosts.posts %#}
+                    {% partial 'blog/postlist' %}
+                    {% component 'postsWithTag' %}
+
+                    {% if posts.lastPage > 1 %}
+                        <div class="mb-5 mb-lg-10">
+                            
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                {% if posts.currentPage > 1 %}
+                                    
+                                    <li class="page-item">
+                                        <a href="?page={{ posts.currentPage-1 }}" class="page-link" aria-label="Previous">
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                                
+                                {% for page in 1..posts.lastPage %}
+                                    
+                                    
+                                    <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                                        
+                                        <a href="?page={{  page }}" class="page-link">{{ page }}</a>
+                                        
+                                    </li>
+                                {% endfor %}
+                                {% if posts.lastPage > posts.currentPage %}
+                                    <li class="page-item">
+                                        <a href="?page={{ posts.currentPage+1 }}" class="page-link" aria-label="Next">
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                        </div>
+
+                    {% endif %}
+                    
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+                    <aside class="single_sidebar_widget search_widget">
+                        <form action="{{ url('/') }}/search" method="get">
+                            <div class="input-group mb-4">
+                                <input type="search" placeholder="What're you searching for?" aria-describedby="button-search" class="form-control"  name="q"
+                                    onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Search Keyword'">
+                                <div class="input-group-append">
+                                    <button id="button-search" type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                    <aside>
+                        <h4 class="widget_title">Categories</h4>
+                        {% component 'blogCategories' %}
+                    </aside>
+                    
+                    <aside class="single_sidebar_widget tag_cloud_widget mt-4">
+                        <h4 class="widget_title">Tags</h4>
+                        
+                        {% component 'tagList' %}
+                        <ul class="list">
+                            
+                            {% for tag in blogTags.tags %}
+                                
+                                <span class="badge badge-pill badge-primary">
+                                    <a href="{{ url('/') }}/tag/{{ tag.name }}" class="text-light">{{ tag.name }}</a>
+                                </span>
+                            {% endfor %}
+                            
+                            
+                        </ul>
+                    </aside>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+        {% for post in posts %}
+            <article class="blog_item">
+                <div class="blog_item_img">
+                    {% if post.featured_images[0] %}
+                        
+                        <img class="card-img rounded-0" src="{{ post.featured_images[0].path }}" alt="{{ post.featured_images[0].title }}">
+                    {% else %}
+                        <img class="card-img rounded-0" src="https://picsum.photos/750/375?random={{ post.id }}" >
+                    {% endif %}
+                    <div class="blog_item_date">
+                        
+                        
+                        <h3>{{ post.published_at |date("j") }}</h3>
+                        <p>{{ post.published_at |date("M") }}</p>
+                    </div>
+                </div>
+                <div class="blog_details">
+                    <a class="d-inline-block" href="{{ url('/') }}/blog/post/{{ post.slug }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <p>{{ post.excerpt }}</p>
+                    <ul class="blog-info-link">
+                        
+                        
+                        {% if post.categories.count %}
+                        {% endif %}
+                        {% for category in post.categories %}
+                            
+                            <li><a href="{{ url('/') }}/category/{{ category.slug }}">{{ category.name }}</a></li>
+                            {% if not loop.last %}
+                            {% endif %}
+                        {% endfor %}
+                        
+                        <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
+                    </ul>
+                </div>
+            </article>
+            <hr>
+        {% endfor %}

@@ -1,0 +1,22 @@
+title = "Rainlab-category"
+url = "/category/:slug"
+layout = "blog"
+meta_title = "Category"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "plugins/rainlab-category"
+postPage = "plugins/rainlab-post"
+==
+<?php
+function onEnd(){
+    	$this->page->title = $this->category->name;
+    }
+?>
+==
+{% partial 'blog/blog-list' %}

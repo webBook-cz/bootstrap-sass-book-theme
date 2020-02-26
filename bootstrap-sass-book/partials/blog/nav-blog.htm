@@ -1,0 +1,132 @@
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "plugins/rainlab-category"
+==
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary" role="navigation">
+    <div class="container">
+    {% if this.theme.site_logo %}
+        <a class="navbar-brand" href="{{ 'home'|page }}#top">
+            <img src="{{ this.theme.site_logo.path }}" alt="{{ this.theme.site_title }}">
+        </a>
+    {% else %}
+        <a class="navbar-brand mr-4 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.site_title }}</a>
+    {% endif %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-center" id="navbarCollapse">
+            <ul class="navbar-nav">
+
+                {% partial 'blog/menu-items' cats = categories %}
+
+                {#<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown2</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                        <li class="dropdown-item"><a href="#">Action 2 A</a></li>
+                        <li class="dropdown-item"><a href="#">Action 2 B</a></li>
+                        <li class="dropdown-item"><a href="#">Action 2 C</a></li>
+                        <li class="dropdown-item dropdown">
+                            <a class="dropdown-toggle" id="dropdown2-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown2.1</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2-1">
+                                <li class="dropdown-item"><a href="#">Action 2.1 A</a></li>
+                                <li class="dropdown-item"><a href="#">Action 2.1 B</a></li>
+                                <li class="dropdown-item"><a href="#">Action 2.1 C</a></li>
+                                <li class="dropdown-item dropdown">
+                                    <a class="dropdown-toggle" id="dropdown2-1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown2.1.1</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown2-1-1">
+                                        <li class="dropdown-item"><a href="#">Action 2.1.1 A</a></li>
+                                        <li class="dropdown-item"><a href="#">Action 2.1.1 B</a></li>
+                                        <li class="dropdown-item"><a href="#">Action 2.1.1 C</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item dropdown">
+                                    <a class="dropdown-toggle" id="dropdown2-1-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown2.1.2</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown2-1-2">
+                                        <li class="dropdown-item"><a href="#">Action 2.1.2 A</a></li>
+                                        <li class="dropdown-item"><a href="#">Action 2.1.2 B</a></li>
+                                        <li class="dropdown-item"><a href="#">Action 2.1.2 C</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>#}
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% put styles %}
+    <style>
+.navbar .dropdown-toggle, .navbar .dropdown-menu a {
+    cursor: pointer;
+}
+
+.navbar .dropdown-item.active, .navbar .dropdown-item:active {
+    color: inherit;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.navbar .dropdown-item:focus, .navbar .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+@media (min-width: 767px) {
+    .navbar .dropdown-toggle:not(.nav-link)::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: .5em;
+        vertical-align: 0;
+        border-bottom: .3em solid transparent;
+        border-top: .3em solid transparent;
+        border-left: .3em solid;
+    }
+}
+</style>
+{% endput %}    
+{% put scripts %}
+<script>
+$(document).ready(function () {
+
+    $('.navbar .dropdown-item.dropdown').on('click', function (e) {
+        var $el = $(this).children('.dropdown-toggle');
+        if ($el.length > 0 && $(e.target).hasClass('dropdown-toggle')) {
+            var $parent = $el.offsetParent(".dropdown-menu");
+            $(this).parent("li").toggleClass('open');
+    
+            if (!$parent.parent().hasClass('navbar-nav')) {
+                if ($parent.hasClass('show')) {
+                    $parent.removeClass('show');
+                    $el.next().removeClass('show');
+                    $el.next().css({"top": -999, "left": -999});
+                } else {
+                    $parent.parent().find('.show').removeClass('show');
+                    $parent.addClass('show');
+                    $el.next().addClass('show');
+                    $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+                }
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            return;
+        }
+    });
+
+    $('.navbar .dropdown').on('hidden.bs.dropdown', function () {
+        $(this).find('li.dropdown').removeClass('show open');
+        $(this).find('ul.dropdown-menu').removeClass('show open');
+    });
+
+});
+</script>
+{% endput %}

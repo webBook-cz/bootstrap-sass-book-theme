@@ -1,0 +1,15 @@
+{% for category in cats %}
+    {% set postCount = category.post_count %}
+
+    <li class="nav-item{% if category.slug == currentCategorySlug %} active{% endif %}{% if category.children|length > 0 %} dropdown{% endif %}">
+        {% if category.children|length > 0 %}
+            <a class="nav-link dropdown-toggle" id="dropdown{{ category.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ category.name }}</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown{{ category.id }}">
+                {% partial 'blog/dropdown-items' subcats = category.children %}
+            </ul>
+        {% else %}
+            <a class="nav-link" href="{{ category.url }}">{{ category.name }}</a>
+        {% endif %}
+        
+    </li>
+{% endfor %}

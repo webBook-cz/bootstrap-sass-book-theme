@@ -9,11 +9,9 @@
 </head>
 <body id="body">
     {% partial 'site/header' %}
-    {% partial 'site/nav-home' %}
-    <main class="web-main py-3">
-        <div class="container">
-            {% page %}
-        </div>
+    {% partial 'blog/nav-blog' %}
+    <main class="web-main">
+        {% page %}
     </main>
     {% partial 'site/footer' %}
     {% partial 'site/scripts' %}

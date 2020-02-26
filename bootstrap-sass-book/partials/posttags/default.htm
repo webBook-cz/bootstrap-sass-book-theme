@@ -1,0 +1,9 @@
+{% set tags = __SELF__.tags %}
+
+{% if tags | length %}
+    {% for item in tags %}
+    <span class="badge badge-pill badge-primary">
+        <a href="{{ item.url }}" class="text-light">{{ item.name }}</a>
+    </span>
+    {% endfor %}
+{% endif %}

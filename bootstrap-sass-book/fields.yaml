@@ -147,7 +147,7 @@ tabs:
             tab: Intro
             label: Button link
             type: text
-            default: "https://webbook.page/bootstrap-sass-theme"
+            default: "/content/default"
             span: right
             comment: Leave empty for hiding button
         intro_img:

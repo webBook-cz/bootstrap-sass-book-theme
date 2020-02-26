@@ -1,0 +1,18 @@
+{% for category in categories %}
+    {% set postCount = category.post_count %}
+    <li class="{% if category.slug == currentCategorySlug %}active{% endif %} list-group-item">
+        <a href="{{ category.url }}">{{ category.name }}</a> 
+        {% if postCount %}
+            <span class="badge">{{ postCount }}</span>
+        {% endif %}
+
+        {% if category.children|length > 0 %}
+            <ul  class="list-group list-group-flush">
+                {% partial __SELF__ ~ "::items"
+                    categories=category.children
+                    currentCategorySlug=currentCategorySlug
+                %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}

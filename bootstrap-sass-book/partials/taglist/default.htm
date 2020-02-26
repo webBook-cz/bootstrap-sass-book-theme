@@ -1,0 +1,17 @@
+{% set tags = __SELF__.tags %}
+
+{% if tags | length %}
+        {% for item in tags %}
+            {% set postCount = item.posts_count %}
+            <span class="badge badge-pill badge-primary">
+                <a href="{{ item.url }}" class="text-light">
+                    {{ item.name }}
+                    {% if postCount %}
+                        <span class="badge badge-pill badge-secondary">{{ postCount }}</span>
+                    {% endif %}
+                </a>
+            </span>
+        {% endfor %}
+{% else %}
+    {{ "ginopane.blogtaxonomy::lang.components.tag_list.no_tags_message" | trans }}
+{% endif %}
