@@ -614,48 +614,58 @@ is_hidden = 0
           </div>
         </section>
         <section>
-          <div class="container">
-            <table class="table">
-              <tbody>
-                <tr>
-                    <th>xs</th>
-                    <th>sm</th>
-                    <th>md</th>
-                    <th>lg</th>
-                    <th>xl</th>
-                </tr>
-                <tr>
-                  <td><div class="d-none d-sm-block">hidden-xs-down</div></td>
-                  <td><div class="d-none d-md-block">hidden-sm-down</div></td>
-                  <td><div class="d-none d-lg-block">hidden-md-down</div></td>
-                  <td><div class="d-none d-xl-block">hidden-lg-down</div></td>
-                  <td><div class="d-none">hidden-xl-down</div></td>
-                </tr>
-                <tr>
-                  <td><div class="d-none">hidden-xs-up</div></td>
-                  <td><div class="d-sm-none">hidden-sm-up</div></td>
-                  <td><div class="d-md-none">hidden-md-up</div></td>
-                  <td><div class="d-lg-none">hidden-lg-up</div></td>
-                  <td><div class="d-xl-none">hidden-xl-up</div></td>
-                </tr>
-                <tr>
-                  <td><div class="d-none d-sm-block">hidden-xs</div></td>
-                  <td><div class="d-block d-sm-none d-md-block">hidden-sm</div></td>
-                  <td><div class="d-block d-md-none d-lg-block">hidden-md</div></td>
-                  <td><div class="d-block d-lg-none d-xl-block">hidden-lg</div></td>
-                  <td><div class="d-block d-xl-none">hidden-xl</div></td>
-                </tr>
-                <tr>
-                  <td><div class="d-block d-sm-none">visible-xs</div></td>
-                  <td><div class="d-none d-sm-block d-md-none">visible-sm</div></td>
-                  <td><div class="d-none d-md-block d-lg-none">visible-md</div></td>
-                  <td><div class="d-none d-lg-block d-xl-none">visible-lg</div></td>
-                  <td><div class="d-none d-xl-block">visible-xl</div></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
+            <div class="container">
+                <h3 class="mb-4 text-center">Responsive visibility</h3>
+                <table class="table tbl-wide">
+                  <tbody>
+                    <tr>
+                        <th>
+                            xs <br><small>&lt; 576px</small>
+                        </th>
+                        <th>
+                            sm <br><small>≥ 576px</small>
+                        </th>
+                        <th>
+                            md <br><small>≥ 768px</small>
+                        </th>
+                        <th>
+                            lg <br><small>≥ 992px</small>
+                        </th>
+                        <th>
+                            xl <br><small>≥ 1200px</small>
+                        </th>
+                    </tr>
+                    <tr>
+                      <td><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-md-block" title="" data-original-title="hidden-sm-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-lg-block" title="" data-original-title="hidden-md-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="hidden-lg-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
+                    </tr>
+                    <tr>
+                      <td><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xs-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-sm-none" title="" data-original-title="hidden-sm-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-md-none" title="" data-original-title="hidden-md-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-lg-none" title="" data-original-title="hidden-lg-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-xl-none" title="" data-original-title="hidden-xl-up"><i class="fas fa-dot-circle"></i></div></td>
+                    </tr>
+                    <tr>
+                      <td><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-block d-sm-none d-md-block" title="" data-original-title="hidden-sm"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-block d-md-none d-lg-block" title="" data-original-title="hidden-md"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-block d-lg-none d-xl-block" title="" data-original-title="hidden-lg"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-block d-xl-none" title="" data-original-title="hidden-xl"><i class="fas fa-dot-circle"></i></div></td>
+                    </tr>
+                    <tr>
+                      <td><div data-toggle="tooltip" class="d-block d-sm-none" title="" data-original-title="visible-xs"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-sm-block d-md-none" title="" data-original-title="visible-sm"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-md-block d-lg-none" title="" data-original-title="visible-md"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-lg-block d-xl-none" title="" data-original-title="visible-lg"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="visible-xl"><i class="fas fa-dot-circle"></i></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
         </section>
       </main>
 

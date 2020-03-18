@@ -1,0 +1,13 @@
+
+    
+{% if __SELF__.posts | length %}
+
+        {% partial 'blog/postlist' posts = __SELF__.posts %}
+
+
+    <nav id="{{ __SELF__.alias }}-pagination">
+        {% partial __SELF__ ~ '::pagination' %}
+    </nav>
+{% else %}
+    {{ "ginopane.blogtaxonomy::lang.components.tag_posts.no_posts_message" | trans }}
+{% endif %}

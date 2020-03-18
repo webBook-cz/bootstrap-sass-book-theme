@@ -10,20 +10,19 @@ enableTagFilter = "never"
 tagPage = "plugins/ginopane-blogtags"
 tagsPage = "plugins/ginopane-blogtags"
 ==
-<section class="blog_area section-padding1">
-    <div class="container">
-        <div class="col-lg-12">
-            <div class="">
-                <br>
+    {% if category %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
                     <h1 >{{ category.name }}</h1>
-                <br>
+                </div>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-lg-8 mb-5 mb-lg-0">
-                <div class="blog_left_sidebar">
-                    
+    {% endif %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+
                     {% if blogPost %}
 
                     <div class="single-post">
@@ -73,79 +72,76 @@ tagsPage = "plugins/ginopane-blogtags"
                     {% if posts.lastPage > 1 %}
                         <div class="mb-5 mb-lg-10">
                             
-                        <nav class="blog-pagination justify-content-center d-flex">
-                            <ul class="pagination">
-                                {% if posts.currentPage > 1 %}
-                                    
-                                    <li class="page-item">
-                                        <a href="?page={{ posts.currentPage-1 }}" class="page-link" aria-label="Previous">
-                                            <i class="ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                {% endif %}
-                                
-                                {% for page in 1..posts.lastPage %}
-                                    
-                                    
-                                    <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    {% if posts.currentPage > 1 %}
                                         
-                                        <a href="?page={{  page }}" class="page-link">{{ page }}</a>
+                                        <li class="page-item">
+                                            <a href="?page={{ posts.currentPage-1 }}" class="page-link" aria-label="Previous">
+                                                <i class="ti-angle-left"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                    
+                                    {% for page in 1..posts.lastPage %}
                                         
-                                    </li>
-                                {% endfor %}
-                                {% if posts.lastPage > posts.currentPage %}
-                                    <li class="page-item">
-                                        <a href="?page={{ posts.currentPage+1 }}" class="page-link" aria-label="Next">
-                                            <i class="ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                {% endif %}
-                            </ul>
-                        </nav>
+                                        
+                                        <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                                            
+                                            <a href="?page={{  page }}" class="page-link">{{ page }}</a>
+                                            
+                                        </li>
+                                    {% endfor %}
+                                    {% if posts.lastPage > posts.currentPage %}
+                                        <li class="page-item">
+                                            <a href="?page={{ posts.currentPage+1 }}" class="page-link" aria-label="Next">
+                                                <i class="ti-angle-right"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
                         </div>
-
                     {% endif %}
                     
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog_right_sidebar">
-                    <aside class="single_sidebar_widget search_widget">
-                        <form action="{{ url('/') }}/search" method="get">
-                            <div class="input-group mb-4">
-                                <input type="search" placeholder="What're you searching for?" aria-describedby="button-search" class="form-control"  name="q"
-                                    onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Search Keyword'">
-                                <div class="input-group-append">
-                                    <button id="button-search" type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form action="{{ url('/') }}/search" method="get">
+                                <div class="input-group mb-4">
+                                    <input type="search" placeholder="What're you searching for?" aria-describedby="button-search" class="form-control"  name="q"
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Search Keyword'">
+                                    <div class="input-group-append">
+                                        <button id="button-search" type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </aside>
-                    <aside>
-                        <h4 class="widget_title">Categories</h4>
-                        {% component 'blogCategories' %}
-                    </aside>
-                    
-                    <aside class="single_sidebar_widget tag_cloud_widget mt-4">
-                        <h4 class="widget_title">Tags</h4>
+                            </form>
+                        </aside>
+                        <aside>
+                            <h4 class="widget_title">Categories</h4>
+                            {% component 'blogCategories' %}
+                        </aside>
                         
-                        {% component 'tagList' %}
-                        <ul class="list">
+                        <aside class="single_sidebar_widget tag_cloud_widget mt-4">
+                            <h4 class="widget_title">Tags</h4>
                             
-                            {% for tag in blogTags.tags %}
+                            {% component 'tagList' %}
+                            <ul class="list">
                                 
-                                <span class="badge badge-pill badge-primary">
-                                    <a href="{{ url('/') }}/tag/{{ tag.name }}" class="text-light">{{ tag.name }}</a>
-                                </span>
-                            {% endfor %}
-                            
-                            
-                        </ul>
-                    </aside>
-                    
+                                {% for tag in blogTags.tags %}
+                                    
+                                    <span class="badge badge-pill badge-primary">
+                                        <a href="{{ url('/') }}/tag/{{ tag.name }}" class="text-light">{{ tag.name }}</a>
+                                    </span>
+                                {% endfor %}
+                                
+                                
+                            </ul>
+                        </aside>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
