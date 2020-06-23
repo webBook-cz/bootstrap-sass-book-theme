@@ -23,9 +23,7 @@ function onEnd()
 {
     if($this['post']){
         $this->page->title = $this['post']->title;
-    } else {
-        return Redirect::to('/404');
-    }
+    } 
 }
 ?>
 ==
