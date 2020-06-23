@@ -89,8 +89,8 @@ tabs:
             tab: General
             label: Google fonts
             type: text
-            default: Montserrat:300,300i,400,400i,700,700i|Roboto+Slab:400,700&display=swap&subset=latin-ext
-            comment: "Link if you want to use google fonts (eg: Open+Sans:400,400i,700,800|Oswald&display=swap&subset=latin-ext)"
+            default: https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap
+            comment: "Link if you want to use google fonts (eg: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&family=Oswald:wght@500&display=swap)"
 
         font_awesome:
             tab: General
@@ -99,6 +99,7 @@ tabs:
             span: storm
             cssClass: "col-sm-2 p-l-0"
             default: true
+
         footer_menu:
             tab: General
             label: Visible footer menu
@@ -130,7 +131,7 @@ tabs:
             label: Headline
             type: text
             span: auto
-            default: "Bootstrap 4.4.1 SASS Theme"
+            default: "Bootstrap 4.5 SASS Theme"
         intro_subhead:
             tab: Intro
             label: Subhead

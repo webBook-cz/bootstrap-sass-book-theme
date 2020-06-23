@@ -6,6 +6,8 @@
 @import "webbook/faq";
 //webBook Download plugin styling 
 @import "webbook/download";
+//webBook 404 
+@import "webbook/404";
 //Rainlab Blog plugin styling 
 @import "plugins/rainlab-blog";
 
@@ -106,6 +108,13 @@
 
 .carousel {
   margin-bottom: 4rem;
+}
+
+// bootstrap icons size
+#content {
+  svg {
+    font-size: 2rem;
+  }
 }
 
 .carousel-caption {

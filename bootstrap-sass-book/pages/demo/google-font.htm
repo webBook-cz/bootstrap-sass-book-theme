@@ -1,0 +1,137 @@
+title = "Google font"
+url = "/google-font"
+layout = "demo"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+   $this['fontweights'] = array(
+            '100' => 'Thin',
+            '100i' => 'Thin Italic',
+            '200' => 'Extra Light',
+            '200i' => 'Extra Light Italic',
+            '300' => 'Light',
+            '300i' => 'Light Italic',
+            '400' => 'Normal',
+            '400i' => 'Normal Italic',
+            '500' => 'Medium',
+            '500i' => 'Medium Italic',
+            '600' => 'Semi Bold',
+            '600i' => 'Semi Bold Italic',
+            '700' => 'Bold',
+            '700i' => 'Bold Italic',
+            '800' => 'Extra Bold',
+            '800i' => 'Extra Bold Italic',
+            '900' => 'Ultra Bold',
+            '900i' => 'Ultra Bold Italic',
+
+    );
+}
+?>
+==
+{#  START FONT INFO #}
+
+{% set fontName = 'Roboto' %}
+{% set fontFamily = 'Roboto' %}
+{% set fontCSS = 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' %}
+{% set weights = '100,100i,300,300i,400,400i,500,500i,700,700i,900,900i' %}
+
+{#  END FONT INFO #}
+
+{% set string1 = 'Zvlášť zákeřný učeň s ďolíčky běží podél zóny úlů' %}
+{% set string2 = 'Loď čeří kýlem tůň obzvlášť v grónské úžině' %}
+{% set numbers = '1263456789' %}
+{% set specials = '.,:;?!%&|&dash;&ndash;&mdash;&times;+©' %}
+
+
+<div class="container">
+    <h1>Font family: <span class="font-face">{{ fontName }}</span></h1>
+
+    	{% set weights = weights|split(',') %}
+    	
+    	{% for weight in weights %}
+    	
+            <div class="fontname">{{ fontName }} {{ fontweights[weight] }} ({{ weight }})</div>
+            <div class="font-face font-size font{{ weight }}">
+                {{ string1 }} {{ numbers }} -  @<br />
+                {{ string2|upper }} {{ specials|raw }}
+                <br>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<hr>
+            </div>
+    	
+    	{% endfor %}
+</div>
+{% put styles %}
+    <link rel="stylesheet"	href="{{ fontCSS }}">
+<style>
+    .font-face  {
+        font-family: {{ fontFamily }}, sans-serif;
+    }
+    .font-size  {
+        font-size: 24px;
+    }
+    .font100 {
+        font-weight: 100;
+    }
+    .font100i {
+        font-weight: 100;
+        font-style: italic;
+    }
+    .font200 {
+        font-weight: 200;
+    }
+    .font200i {
+        font-weight: 200;
+        font-style: italic;
+    }
+    .font300 {
+        font-weight: 300;
+    }
+    .font300i {
+        font-weight: 300;
+        font-style: italic;
+    }
+    .font400 {
+        font-weight: 400;
+    }
+    .font400i {
+        font-weight: 400;
+        font-style: italic;
+    }
+    .font500 {
+        font-weight: 500;
+    }
+    .font500i {
+        font-weight: 500;
+        font-style: italic;
+    }
+    .font600 {
+        font-weight: 600;
+    }
+    .font600i {
+        font-weight: 600;
+        font-style: italic;
+    }
+    .font700 {
+        font-weight: 700;
+    }
+    .font700i {
+        font-weight: 700;
+        font-style: italic;
+    }
+    .font800 {
+        font-weight: 800;
+    }
+    .font800i {
+        font-weight: 800;
+        font-style: italic;
+    }
+    .font900 {
+        font-weight: 900;
+    }
+    .font900i {
+        font-weight: 900;
+        font-style: italic;
+    }
+</style>
+{% endput %}

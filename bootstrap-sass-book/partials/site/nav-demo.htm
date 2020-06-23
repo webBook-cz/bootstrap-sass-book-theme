@@ -1,22 +1,12 @@
-[viewBag]
-==
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
         <div class="container">
-            
-            {% if this.theme.site_logo %}
-                <a class="navbar-brand" href="{{ 'home'|page }}#top">
-                    <img src="{{ this.theme.site_logo.path }}" alt="{{ this.theme.site_title }}">
-                </a>
-            {% else %}
-                <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.site_title }}</a>
-            {% endif %}
-            
+            <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.intro_headline }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+            <div class="navbar-collapse collapse justify-content-center top-navbar" id="collapsingNavbar">
                 <ul class="navbar-nav ml-auto">
+                {% if this.page.filename == 'demo/elements.htm' %}
                     <li class="nav-item">
                         <a class="nav-link" href="#buttons">Buttons</a>
                     </li>
@@ -44,10 +34,10 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDd">
                             <a class="dropdown-item px-2" href="#more">Badges</a>
-                            <a class="dropdown-item px-2" href="#more">Tooltips &amp; Popups</a>
-                            <a class="dropdown-item px-2" href="#more">Progress &amp; Alerts</a>
+                            <a class="dropdown-item px-2" href="#tooltips">Tooltips &amp; Popups</a>
+                            <a class="dropdown-item px-2" href="#alerts">Progress &amp; Alerts</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item px-2" href="#more">All</a>
+                            <a class="dropdown-item px-2" href="#accordion">Accordion</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -55,12 +45,21 @@
                           Demo
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDd">
-                            <a class="dropdown-item px-2" href="#more">Flexbox</a>
-                            <a class="dropdown-item px-2" href="#more">Grid</a>
+                            <a class="dropdown-item px-2" href="/icons">Icons</a>
+                            <a class="dropdown-item px-2" href="/fa">Font Awesome</a>
+                            <a class="dropdown-item px-2" href="/flexbox">Flexbox</a>
+                            <a class="dropdown-item px-2" href="/google-font">Google Font</a>
+                            <a class="dropdown-item px-2" href="/external-font">External Font</a>
                         </div>
                     </li>
+                
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/elements">Elements</a>
+                    </li>
+                {% endif %}
+
                 </ul>
             </div>
         </div>
-    </nav>
-    
+    </nav> 
