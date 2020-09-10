@@ -73,22 +73,6 @@
   z-index: 2;
 }
 
-//accordion
-.accordion .card {
-  border-bottom: none;
-  &:last-of-type {
-      border-bottom: $card-border-width solid $card-border-color;
-    }
-}
-
-.accordion .card-header {
-  border-bottom: none;
-}
-
-.collapse.show {
-    border-top: $card-border-width solid $card-border-color;
-}
-
 .description {
   padding: 20px;
 }
@@ -108,6 +92,18 @@
 
 .carousel {
   margin-bottom: 4rem;
+}
+
+//footer navigation
+.footer-nav {
+  margin-bottom: 10px;
+    .nav-link {
+      padding: 0;
+    }
+}
+
+.copyright {
+  color: $secondary;
 }
 
 // bootstrap icons size

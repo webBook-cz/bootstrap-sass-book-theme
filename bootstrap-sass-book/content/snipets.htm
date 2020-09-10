@@ -1,0 +1,27 @@
+<p><strong>debug only on specific IP</strong></p><pre>!==
+&lt;?php
+function onStart()
+{
+   $this['ip'] = $_SERVER['REMOTE_ADDR'];
+}
+?&gt;
+!==
+{% if ip == '82.113.44.66' %}
+   {{ d(this) }}
+{% endif %}</pre>
+<hr>
+
+<p><strong>Univerzální CONTENT</strong></p><pre><!-- [CONTENT] (checkcontent plugin) -->
+ {% if content_exists('mailing/' ~ this.param.slug ~ '.htm') %}
+     {% content 'mailing/' ~ this.param.slug %}
+ {% else %}
+     {% content 'mailing/new' %}
+ {% endif %}</pre>
+<hr>
+
+<p><strong>Dnešní datum</strong></p><code><!-- [CONTENT] (checkcontent plugin) -->
+ {{ "now"|date("Y") }}</code>
+<hr>
+
+<p>Tlačítka Froala Editor:</p>
+<code>fullscreen, undo, redo, |, bold, italic, underline, color, subscript, superscript, clearFormatting, |, align, |, formatOL, formatUL, indent, outdent, insertTable, paragraphFormat, paragraphStyle, insertLink, insertImage, insertHR, quote, html</code>

@@ -27,6 +27,7 @@ $grid-breakpoints: (
 $font-family-base: $font-text;
 $line-height-base: $font-text-height;
 $font-weight-normal: $font-text-weight;
+//$enable-responsive-font-sizes: $font-responsive;
 
 $headings-font-family: $font-head;
 $headings-font-weight: $font-head-weight;
@@ -51,6 +52,11 @@ $dark:         $colour-dark;
     $enable-gradients:true;
 } @else {
     $enable-gradients:false;
+}
+@if $font-responsive == 1 {
+    $enable-responsive-font-sizes:true;
+} @else {
+    $enable-responsive-font-sizes:false;
 }
 
 // $enable-grid-classes:false;

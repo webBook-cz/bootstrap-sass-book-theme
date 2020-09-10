@@ -270,7 +270,7 @@ is_hidden = 0
                     <div class="card border-primary h-100">
                         <div class="card-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action active">Dis List Group</a>
+                                <a href="#" class="list-group-item list-<div>group</div>-item-action active">Dis List Group</a>
                                 <a href="#" class="list-group-item list-group-item-action">Custom Colors</a>
                                 <a href="#" class="list-group-item list-group-item-action">Google Fonts</a>
                                 <a href="#" class="list-group-item list-group-item-action disabled">Ionicons</a>
@@ -513,55 +513,54 @@ is_hidden = 0
               </div>
               <div class="col-10 mx-auto">
 
-                <div class="accordion" role="tablist">
+                <div class="accordion" id="accordionExample">
                   <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingOne">
-                      <h5 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="card-header p-0" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left shadow-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           <i class="fas fa-chevron-down float-right"></i>
                           Collapsible Group Item #1
                         </button>
-                      </h5>
+                      </h2>
                     </div>
 
-                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent=".accordion">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent=".accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingTwo">
-                      <h5 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="card-header p-0" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left shadow-none collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           <i class="fas fa-chevron-down float-right"></i>
                           Collapsible Group Item #2
                         </button>
-                      </h5>
+                      </h2>
                     </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent=".accordion">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent=".accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header p-0" role="tab" id="headingThree">
-                      <h5 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="card-header p-0" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left shadow-none collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           <i class="fas fa-chevron-down float-right"></i>
                           Collapsible Group Item #3
                         </button>
-                      </h5>
+                      </h2>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent=".accordion">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent=".accordion">
                       <div class="card-body">
                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                       </div>
                     </div>
                   </div>
                 </div>
-
 
               </div>
             </div>
@@ -571,7 +570,7 @@ is_hidden = 0
         <section>
             <div class="container">
                 <h3 class="mb-4 text-center">Responsive visibility</h3>
-                <table class="table tbl-wide text-center">
+                <table class="table tbl-wide text-center resp-visibility">
                   <tbody>
                     <tr>
                         <th>
@@ -591,32 +590,32 @@ is_hidden = 0
                         </th>
                     </tr>
                     <tr>
-                      <td><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-md-block" title="" data-original-title="hidden-sm-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-lg-block" title="" data-original-title="hidden-md-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="hidden-lg-down"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-sm-block</div><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-md-block</div><div data-toggle="tooltip" class="d-none d-md-block" title="" data-original-title="hidden-sm-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-lg-block</div><div data-toggle="tooltip" class="d-none d-lg-block" title="" data-original-title="hidden-md-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-xl-block</div><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="hidden-lg-down"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none</div><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xl-down"><i class="fas fa-dot-circle"></i></div></td>
                     </tr>
                     <tr>
-                      <td><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xs-up"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-sm-none" title="" data-original-title="hidden-sm-up"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-md-none" title="" data-original-title="hidden-md-up"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-lg-none" title="" data-original-title="hidden-lg-up"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-xl-none" title="" data-original-title="hidden-xl-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none</div><div data-toggle="tooltip" class="d-none" title="" data-original-title="hidden-xs-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-sm-none</div><div data-toggle="tooltip" class="d-sm-none" title="" data-original-title="hidden-sm-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-md-none</div><div data-toggle="tooltip" class="d-md-none" title="" data-original-title="hidden-md-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-lg-none</div><div data-toggle="tooltip" class="d-lg-none" title="" data-original-title="hidden-lg-up"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-xl-none</div><div data-toggle="tooltip" class="d-xl-none" title="" data-original-title="hidden-xl-up"><i class="fas fa-dot-circle"></i></div></td>
                     </tr>
                     <tr>
-                      <td><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-block d-sm-none d-md-block" title="" data-original-title="hidden-sm"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-block d-md-none d-lg-block" title="" data-original-title="hidden-md"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-block d-lg-none d-xl-block" title="" data-original-title="hidden-lg"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-block d-xl-none" title="" data-original-title="hidden-xl"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-sm-block</div><div data-toggle="tooltip" class="d-none d-sm-block" title="" data-original-title="hidden-xs"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block d-sm-none d-md-block</div><div data-toggle="tooltip" class="d-block d-sm-none d-md-block" title="" data-original-title="hidden-sm"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block d-md-none d-lg-block</div><div data-toggle="tooltip" class="d-block d-md-none d-lg-block" title="" data-original-title="hidden-md"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block d-lg-none d-xl-block</div><div data-toggle="tooltip" class="d-block d-lg-none d-xl-block" title="" data-original-title="hidden-lg"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block d-xl-none</div><div data-toggle="tooltip" class="d-block d-xl-none" title="" data-original-title="hidden-xl"><i class="fas fa-dot-circle"></i></div></td>
                     </tr>
                     <tr>
-                      <td><div data-toggle="tooltip" class="d-block d-sm-none" title="" data-original-title="visible-xs"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-sm-block d-md-none" title="" data-original-title="visible-sm"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-md-block d-lg-none" title="" data-original-title="visible-md"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-lg-block d-xl-none" title="" data-original-title="visible-lg"><i class="fas fa-dot-circle"></i></div></td>
-                      <td><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="visible-xl"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-block d-sm-none</div><div data-toggle="tooltip" class="d-block d-sm-none" title="" data-original-title="visible-xs"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-sm-block d-md-none</div><div data-toggle="tooltip" class="d-none d-sm-block d-md-none" title="" data-original-title="visible-sm"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-md-block d-lg-none</div><div data-toggle="tooltip" class="d-none d-md-block d-lg-none" title="" data-original-title="visible-md"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-lg-block d-xl-none</div><div data-toggle="tooltip" class="d-none d-lg-block d-xl-none" title="" data-original-title="visible-lg"><i class="fas fa-dot-circle"></i></div></td>
+                      <td><div class="infotext">d-none d-xl-block</div><div data-toggle="tooltip" class="d-none d-xl-block" title="" data-original-title="visible-xl"><i class="fas fa-dot-circle"></i></div></td>
                     </tr>
                   </tbody>
                 </table>
@@ -625,3 +624,10 @@ is_hidden = 0
       </main>
 
 {% partial 'site/footer' %}
+{% put styles %}
+<style>
+    .infotext {
+        font-size: 10px;
+    }
+</style>
+{% endput %}

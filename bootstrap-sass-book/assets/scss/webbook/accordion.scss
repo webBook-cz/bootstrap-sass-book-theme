@@ -1,0 +1,16 @@
+//accordion
+/*.accordion .card {
+  border-bottom: none;
+  &:last-of-type {
+      border-bottom: $card-border-width solid $card-border-color;
+    }
+}
+
+.accordion .card-header {
+  border-bottom: none;
+}
+
+.collapse.show {
+    border-top: $card-border-width solid $card-border-color;
+}
+*/

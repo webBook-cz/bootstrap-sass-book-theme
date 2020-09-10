@@ -33,7 +33,7 @@ tabs:
             tab: General
             label: Fonts
             type: section
-            comment: Don't forget to include style for your font file in header (eg. link from google fonts)
+            comment: Don't forget to include style for your font file in header (or use Google fonts link)
             cssClass: "p-t-0"
         font_text:
             label: Font name for text
@@ -90,19 +90,21 @@ tabs:
             label: Google fonts
             type: text
             default: https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap
-            comment: "Link if you want to use google fonts (eg: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&family=Oswald:wght@500&display=swap)"
+            comment: "Complete Link - if you want to use google fonts (eg: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&family=Oswald:wght@500&display=swap)"
 
-        font_awesome:
+
+        font-responsive:
             tab: General
-            label: Use Font Awesome
+            label: Responsive Font Sizes
             type: switch
             span: storm
             cssClass: "col-sm-2 p-l-0"
             default: true
+            assetVar: 'font-responsive'
 
-        footer_menu:
+        font_awesome:
             tab: General
-            label: Visible footer menu
+            label: Use Font Awesome
             type: switch
             span: storm
             cssClass: "col-sm-2 p-l-0"
@@ -122,37 +124,37 @@ tabs:
             cssClass: "col-sm-3 p-l-0"
 
         intro_enabled:
-            tab: Intro
+            tab: Intro / Footer
             label: Enabled
             type: switch
             default: true
         intro_headline:
-            tab: Intro
+            tab: Intro / Footer
             label: Headline
             type: text
             span: auto
             default: "Bootstrap 4.5 SASS Theme"
         intro_subhead:
-            tab: Intro
+            tab: Intro / Footer
             label: Subhead
             type: text
             span: auto
             default: "Bootsrtrap with easy custom config!"
         intro_button:
-            tab: Intro
+            tab: Intro / Footer
             label: Button
             type: text
             default: Go to Theme Homepage
             span: left
         intro_button_link:
-            tab: Intro
+            tab: Intro / Footer
             label: Button link
             type: text
             default: "/content/default"
             span: right
             comment: Leave empty for hiding button
         intro_img:
-            tab: Intro
+            tab: Intro / Footer
             label: Image
             comment: Please aspect ratio 0,5625 (e.g. 621 x 1104)
             type: fileupload
@@ -160,66 +162,110 @@ tabs:
             imageWidth: 1200
             imageHeight: 900
             assetVar: 'intro-img'
+        info_section_03:
+            tab: Intro / Footer
+            type: section
+            cssClass: "p-t-0"
+
+        footer_menu:
+            tab: Intro / Footer
+            label: Visible footer menu
+            type: switch
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+            comment: enable/disable rich footer
+            default: true
+        footer_nav_title:
+            tab: Intro / Footer
+            label: Navigation Title
+            type: text
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+            default: 'Navigation:'
+        footer_title:
+            tab: Intro / Footer
+            label: Footer Title
+            type: text
+            span: right
+            cssClass: "col-sm-4 p-l-0"
+            default: 'Footer:'
+        footer_logo:
+            tab: Intro / Footer
+            label: Footer Image
+            comment: Please use transparent image
+            type: fileupload
+            mode: image
+            fileTypes: jpg,jpeg,bmp,png,webp,gif,svg
+            imageWidth: 240
+            imageHeight: 90
+            span: left
+        footer_text:
+            tab: Intro / Footer
+            label: Footer Text
+            type: richeditor
+            span: right
+            default: Footer text
+
 
         primary_color:
             label: Primary Colour
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             type: colorpicker
             default: '#2f3c48'
             assetVar: 'colour-primary'
         secondary_color:
             label: Secondary Colour
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             type: colorpicker
             default: '#6f7f8c'
             assetVar: 'colour-secondary'
         success_color:
             label: Success Colour
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             type: colorpicker
             default: '#3e4d59'
             assetVar: 'colour-success'
         info_color:
             label: Info color
             type: colorpicker
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: '#5c8f94'
             assetVar: 'colour-info'
         warning_color:
             label: Warning color
             type: colorpicker
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: '#6e9fa5'
             assetVar: 'colour-warning'
         danger_color:
             label: Danger color
             type: colorpicker
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: '#cc330d'
             assetVar: 'colour-danger'
         light_color:
             label: Light color
             type: colorpicker
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: '#eceeec'
             assetVar: 'colour-light'
         dark_color:
             label: Dark color
             type: colorpicker
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: '#1e2b37'
             assetVar: 'colour-dark'
         rounded:
             label: Rounded
             type: switch
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: true
             assetVar: 'rounded'
             span: auto
         gradients:
             label: Gradients
             type: switch
-            tab: Bootstrap Colours & Settings
+            tab: Colours & Settings
             default: false
             assetVar: 'gradients'
             span: auto
@@ -308,7 +354,7 @@ tabs:
             tab: root vars
             label: "Breakpoints"
             type: section
-            comment: "Be careful: if not sure, leave default values"
+            comment: "Be careful: if not sure, keep default values"
             cssClass: "p-a m-y control-scrollpanel"
 
         break-xs:

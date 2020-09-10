@@ -1,38 +1,22 @@
 ==
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
-        <div class="container">
-            
-            {% if this.theme.site_logo %}
-                <a class="navbar-brand" href="{{ 'home'|page }}#top">
-                    <img src="{{ this.theme.site_logo.path }}" alt="{{ this.theme.site_title }}">
-                </a>
-            {% else %}
-                <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.site_title }}</a>
-            {% endif %}
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container">
+        
+        {% if this.theme.site_logo %}
+            <a class="navbar-brand" href="{{ 'home'|page }}#top">
+                <img src="{{ this.theme.site_logo.path }}" alt="{{ this.theme.site_title }}">
+            </a>
+        {% else %}
+            <a class="navbar-brand mr-1 mb-1 mt-0 smoothscroll" href="{{ 'home'|page }}#top">{{ this.theme.site_title }}</a>
+        {% endif %}
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'plugins'|page }}">Plugins</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'plugins/rainlab-blog'|page }}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'content'|page }}">Content</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'demo/elements'|page }}">Elements</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+            {% partial 'site/nav' %}
         </div>
-    </nav>
+    </div>
+</nav>
     
