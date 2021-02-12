@@ -15,15 +15,21 @@ $gray-dark:  $colour-gray-800;
 
 
 $grid-breakpoints: (
-  xs: $break-xs,
+  xs: 0,
   sm: $break-sm,
   md: $break-md,
   lg: $break-lg,
   xl: $break-xl
 );
 
-// Overriding Bootstrap fonts
+$container-max-widths: (
+  sm: $width-sm,
+  md: $width-md,
+  lg: $width-lg,
+  xl: $width-xl
+);
 
+// Overriding Bootstrap fonts
 $font-family-base: $font-text;
 $line-height-base: $font-text-height;
 $font-weight-normal: $font-text-weight;
@@ -42,6 +48,12 @@ $info:         $colour-info;
 $warning:      $colour-warning;
 $light:        $colour-light;
 $dark:         $colour-dark;
+
+// Grid
+$grid-columns:          $columns;
+$grid-gutter-width:     $gutter-width;
+$grid-row-columns:      $row-columns;
+
 
 @if $rounded == 1 {
     $enable-rounded:true;

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {% partial 'site/styles' %}
+    {% if this.theme.google_analytics %}
+        {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
+    {% endif %}
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="68" id="body">
     {% partial 'site/nav-demo' %}

@@ -1,0 +1,12 @@
+title = "Downloader List"
+url = "/downloader-list/:category_slug?"
+layout = "home"
+is_hidden = 0
+
+[downloaderlist]
+mode = "table"
+category_slug = ":category_slug"
+==
+<div class="container">
+    {% component 'downloaderlist' %}
+</div>

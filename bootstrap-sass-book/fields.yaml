@@ -133,7 +133,7 @@ tabs:
             label: Headline
             type: text
             span: auto
-            default: "Bootstrap 4.5 SASS Theme"
+            default: "Bootstrap 4.6 SASS Theme"
         intro_subhead:
             tab: Intro / Footer
             label: Subhead
@@ -270,134 +270,194 @@ tabs:
             assetVar: 'gradients'
             span: auto
 
+        info_section:
+            tab: Bootstrap vars
+            label: "Breakpoints & Container widths"
+            type: section
+            comment: "Be careful: if not sure, keep default values"
+            cssClass: "p-a m-y control-scrollpanel"
+
+        break-sm:
+            label: Break SM
+            type: text
+            tab: Bootstrap vars
+            default: '576px'
+            assetVar: 'break-sm'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        break-md:
+            label: Break MD
+            type: text
+            tab: Bootstrap vars
+            default: '768px'
+            assetVar: 'break-md'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        break-lg:
+            label: Break LG
+            type: text
+            tab: Bootstrap vars
+            default: '992px'
+            assetVar: 'break-lg'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        break-xl:
+            label: Break XL
+            type: text
+            tab: Bootstrap vars
+            default: '1200px'
+            assetVar: 'break-xl'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        width-sm:
+            label: Width SM
+            type: text
+            tab: Bootstrap vars
+            default: '540px'
+            assetVar: 'width-sm'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        width-md:
+            label: Width MD
+            type: text
+            tab: Bootstrap vars
+            default: '720px'
+            assetVar: 'width-md'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        width-lg:
+            label: Width LG
+            type: text
+            tab: Bootstrap vars
+            default: '960px'
+            assetVar: 'width-lg'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        width-xl:
+            label: Width XL
+            type: text
+            tab: Bootstrap vars
+            default: '1140px'
+            assetVar: 'width-xl'
+            span: storm
+            cssClass: "col-sm-3 p-l-0"
+
+        info_section2:
+            tab: Bootstrap vars
+            label: "Grid"
+            type: section
+            cssClass: "p-a m-y control-scrollpanel"
+
+        columns:
+            label: Columns
+            type: text
+            tab: Bootstrap vars
+            default: '12'
+            assetVar: 'columns'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        row-columns:
+            label: Rows
+            type: text
+            tab: Bootstrap vars
+            default: '6'
+            assetVar: 'row-columns'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
+        gutter-width:
+            label: Gutter
+            type: text
+            tab: Bootstrap vars
+            default: '30px'
+            assetVar: 'gutter-width'
+            span: storm
+            cssClass: "col-sm-2 p-l-0"
+
 
         blue:
             label: Blue
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#007bff'
             assetVar: 'colour-blue'
         indigo:
             label: Indigo
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#6610f2'
             assetVar: 'colour-indigo'
         purple:
             label: Purple
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#6f42c1'
             assetVar: 'colour-purple'
         pink:
             label: Pink
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#e83e8c'
             assetVar: 'colour-pink'
         red:
             label: Red
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#dc3545'
             assetVar: 'colour-red'
         orange:
             label: Orange
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#fd7e14'
             assetVar: 'colour-orange'
         yellow:
             label: Yellow
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#ffc107'
             assetVar: 'colour-yellow'
         green:
             label: Green
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#28a745'
             assetVar: 'colour-green'
         teal:
             label: Teal
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#20c997'
             assetVar: 'colour-teal'
         cyan:
             label: Cyan
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#17a2b8'
             assetVar: 'colour-cyan'
         white:
             label: White
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#fff;'
             assetVar: 'colour-white'
         gray-600:
             label: Gray light
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#6c757d'
             assetVar: 'colour-gray-600'
         gray-800:
             label: Gray dark
             type: colorpicker
-            tab: root vars
+            tab: _root colors
             default: '#343a40'
             assetVar: 'colour-gray-800'
-
-        info_section:
-            tab: root vars
-            label: "Breakpoints"
-            type: section
-            comment: "Be careful: if not sure, keep default values"
-            cssClass: "p-a m-y control-scrollpanel"
-
-        break-xs:
-            label: Break XS
-            type: text
-            tab: root vars
-            default: '0'
-            assetVar: 'break-xs'
-            span: storm
-            cssClass: "col-sm-2 p-l-0"
-
-        break-sm:
-            label: Break SM
-            type: text
-            tab: root vars
-            default: '576px'
-            assetVar: 'break-sm'
-            span: storm
-            cssClass: "col-sm-2 p-l-0"
-
-        break-md:
-            label: Break MD
-            type: text
-            tab: root vars
-            default: '768px'
-            assetVar: 'break-md'
-            span: storm
-            cssClass: "col-sm-2 p-l-0"
-
-        break-lg:
-            label: Break LG
-            type: text
-            tab: root vars
-            default: '992px'
-            assetVar: 'break-lg'
-            span: storm
-            cssClass: "col-sm-2 p-l-0"
-
-        break-xl:
-            label: Break XL
-            type: text
-            tab: root vars
-            default: '1200px'
-            assetVar: 'break-xl'
-            span: storm
-            cssClass: "col-sm-2 p-l-0"

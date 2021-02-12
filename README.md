@@ -1,4 +1,10 @@
-Actual Bootstrap (4.5.0) Theme with easy modifications:
+Actual Bootstrap (4.6.0) Theme with easy modifications:
+
+##New in version 1.4.0
+
+* updated bootstrap & font Awesome
+* fixed footer
+* editable Grid (columns, rows & widths) from settings
 
 ##New in version 1.3.0
 

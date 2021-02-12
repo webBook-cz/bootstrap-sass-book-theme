@@ -1,5 +1,5 @@
     {% if this.theme.font_awesome %}
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
     {% endif %}
     {% if this.theme.fonts %}
         <link href="{{ this.theme.fonts }}" rel="stylesheet">
@@ -9,6 +9,3 @@
         ] | theme }}" rel="stylesheet">
         {% styles %}
     <link rel="stylesheet" href="{{ 'assets/css/test.css' | theme }}">
-    {% if this.theme.google_analytics %}
-        {% partial 'site/ga'  trackingID = this.theme.google_analytics %}
-    {% endif %}
