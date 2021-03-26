@@ -54,7 +54,6 @@ $grid-columns:          $columns;
 $grid-gutter-width:     $gutter-width;
 $grid-row-columns:      $row-columns;
 
-
 @if $rounded == 1 {
     $enable-rounded:true;
 } @else {
